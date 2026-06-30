@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma - TASK SAGA</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/gerenciar-turma.css">
+</head>
+
+<body class="pagina-turma scanlines">
+
+
+    <header class="barra-topo-mobile">
+        <div class="barra-topo-mobile__marca">TASK SAGA</div>
+        <div class="barra-topo-mobile__acoes">
+            <span class="material-symbols-outlined">account_circle</span>
+        </div>
+    </header>
+
+
+    <nav class="barra-lateral">
+        <div class="barra-lateral__marca">
+            <h1 class="barra-lateral__marca-titulo">TASK SAGA</h1>
+        </div>
+        <div class="barra-lateral__heroi">
+            <div class="cartao-heroi">
+                <div class="cartao-heroi__gradiente"></div>
+                <img class="cartao-heroi__avatar"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFcK54U92Uxf5lHz7vGzZMrL_IoO0ZpAkqHo7hd_3lHaAxBfuUnVn-SdQrrxEJZxFF3Nf_lz8MwnrudTucDpDpyoW3tJcjbyTzIsW7spVwvPvtzzOJtwiE9MPfSPBfqDZ1ei1LmQkeYmkyLnYGe98xJEai1_Zgr0v8GLOuW21CSEGMnuyN-FfSTVZJB5XpKuwU_c9KoqiaLzpzKdKHIHOBeztgHs-TCLh9FGO4KCNxpU42QXxcpMw"
+                    alt="Avatar do Herói">
+                <h2 class="cartao-heroi__nome" id="nome-heroi">Level 14 Hero</h2>
+                <p class="cartao-heroi__classe" id="classe-heroi">Guerreiro</p>
+                <div class="cartao-heroi__barra-xp">
+                    <div class="cartao-heroi__xp-preenchido"></div>
+                </div>
+            </div>
+        </div>
+        <div class="barra-lateral__nav">
+            <a class="link-nav ativo" href="materias.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+                <span class="link-nav__rotulo">Quests</span>
+            </a>
+            <a class="link-nav" href="javascript:void(0)">
+                <span class="material-symbols-outlined">backpack</span>
+                <span class="link-nav__rotulo">Inventario</span>
+            </a>
+            <a class="link-nav" href="javascript:void(0)">
+                <span class="material-symbols-outlined">map</span>
+                <span class="link-nav__rotulo">Mapa</span>
+            </a>
+        </div>
+        <div class="barra-lateral__cta">
+            <button class="botao-dungeon">
+                <span class="material-symbols-outlined">swords</span>
+                <span class="botao-dungeon__rotulo">Entre Na Dungeon</span>
+            </button>
+        </div>
+        <div class="barra-lateral__rodape">
+            <a class="link-rodape" href="javascript:void(0)">
+                <span class="material-symbols-outlined">settings</span>
+                <span>Configuração</span>
+            </a>
+            <a class="link-rodape" href="javascript:void(0)" data-acao="sair">
+                <span class="material-symbols-outlined">logout</span>
+                <span>Sair</span>
+            </a>
+        </div>
+    </nav>
+
+
+    <main class="conteudo-turma">
+        <div class="conteudo-turma__fundo fundo-pedra"></div>
+
+
+        <a class="link-voltar" href="materias.html">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Voltar para Matérias
+        </a>
+
+
+        <div class="cabecalho-turma">
+            <div>
+                <h1 class="cabecalho-turma__titulo" id="titulo-turma">Turma</h1>
+                <p class="cabecalho-turma__subtitulo" id="subtitulo-turma">Dungeon Master</p>
+            </div>
+            <button class="botao-adicionar-quest" id="botao-adicionar-quest">
+                <span class="material-symbols-outlined" style="font-weight: bold;">add</span>
+                Adicionar Nova Quest
+            </button>
+        </div>
+
+
+        <div class="container-quests">
+            <div class="container-quests__borda-superior"></div>
+            <div class="cabecalho-quests">
+                <h2 class="cabecalho-quests__titulo">Quests Ativas</h2>
+                <div class="progresso-quests">
+                    <span class="progresso-quests__rotulo">Progresso:</span>
+                    <div class="progresso-quests__barra">
+                        <div class="progresso-quests__preenchido" id="progresso-preenchido" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="lista-quests" id="lista-quests"></div>
+            <div class="container-quests__borda-inferior"></div>
+        </div>
+    </main>
+
+
+    <nav class="barra-inferior">
+        <a class="barra-inferior__item ativo" href="materias.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+            <span class="barra-inferior__rotulo">Quests</span>
+        </a>
+        <a class="barra-inferior__item" href="javascript:void(0)">
+            <span class="material-symbols-outlined">shield</span>
+            <span class="barra-inferior__rotulo">Inventory</span>
+        </a>
+        <a class="barra-inferior__item" href="javascript:void(0)" data-acao="sair">
+            <span class="material-symbols-outlined">logout</span>
+            <span class="barra-inferior__rotulo">Logout</span>
+        </a>
+    </nav>
+
+
+    <div class="modal-sobreposicao" id="modal-tarefa">
+        <div class="modal-caixa">
+            <h3 class="modal-titulo" id="modal-titulo">Nova Quest</h3>
+            <form class="modal-formulario" id="modal-formulario">
+                <div class="grupo-campo">
+                    <label class="grupo-campo__rotulo" for="input-titulo">Título da Quest</label>
+                    <input class="grupo-campo__input" type="text" id="input-titulo" placeholder="Ex: Lista de Equações"
+                        required>
+                </div>
+                <div class="grupo-campo">
+                    <label class="grupo-campo__rotulo" for="input-descricao">Descrição</label>
+                    <textarea class="grupo-campo__input" id="input-descricao"
+                        placeholder="Descreva a quest..."></textarea>
+                </div>
+                <div class="modal-formulario__linha">
+                    <div class="grupo-campo">
+                        <label class="grupo-campo__rotulo" for="input-nivel">Nível (1-5)</label>
+                        <input class="grupo-campo__input" type="number" id="input-nivel" min="1" max="5" value="1">
+                    </div>
+                    <div class="grupo-campo">
+                        <label class="grupo-campo__rotulo" for="input-xp">XP Reward</label>
+                        <input class="grupo-campo__input" type="number" id="input-xp" min="10" step="10" value="100">
+                    </div>
+                </div>
+                <div class="modal-acoes">
+                    <button class="botao-modal botao-modal--cancelar" type="button"
+                        id="botao-cancelar">Cancelar</button>
+                    <button class="botao-modal botao-modal--salvar" type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="modal-sobreposicao" id="modal-remover">
+        <div class="modal-caixa">
+            <h3 class="modal-titulo">Remover Quest</h3>
+            <p class="texto-confirmacao" id="texto-remover">Tem certeza?</p>
+            <div class="modal-acoes">
+                <button class="botao-modal botao-modal--cancelar" type="button"
+                    id="botao-cancelar-remover">Cancelar</button>
+                <button class="botao-modal botao-modal--remover" type="button"
+                    id="botao-confirmar-remover">Remover</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/app.js"></script>
+    <script src="../js/gerenciar-turma.js"></script>
+</body>
+
+</html>

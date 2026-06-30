@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Saga - Matérias</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/materias.css">
+</head>
+
+<body class="pagina-materias scanlines">
+
+    <nav class="barra-lateral">
+        <div class="barra-lateral__marca">
+            <h1 class="barra-lateral__marca-titulo">TASK SAGA</h1>
+        </div>
+        <div class="barra-lateral__heroi">
+            <div class="cartao-heroi">
+                <div class="cartao-heroi__gradiente"></div>
+                <img class="cartao-heroi__avatar"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsgS_oyK27hkiNQIC-oiEjn3FR8JsO56dyoAyymLOSHl-xiC__5p0P2jUVGWS7Vb7q-ra_IYkz6CAvP1XPN4ESE67SLTcgPynmUGYGBmpcyoN09S0a_FtjPo-bbGZZu2pnBb7HXl_AsO_Fy6Vbn1sM-9Sf2491i7n2EvAi71SFK_TSv1iPVgZ6219ElvjGQinODWB2EaeKY04ISP8PjZn_2IZ1pP94LWrmQR78clmJmkW41Ehxx70"
+                    alt="Avatar do Herói">
+                <h2 class="cartao-heroi__nome" id="nome-heroi">Level 14</h2>
+                <p class="cartao-heroi__classe" id="classe-heroi">Guerreiro</p>
+                <div class="cartao-heroi__barra-xp">
+                    <div class="cartao-heroi__xp-preenchido"></div>
+                </div>
+            </div>
+        </div>
+        <div class="barra-lateral__nav">
+            <a class="link-nav ativo" href="materias.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+                <span class="link-nav__rotulo">Quests</span>
+            </a>
+            <a class="link-nav" href="javascript:void(0)">
+                <span class="material-symbols-outlined">backpack</span>
+                <span class="link-nav__rotulo">Inventario</span>
+            </a>
+            <a class="link-nav" href="javascript:void(0)">
+                <span class="material-symbols-outlined">map</span>
+                <span class="link-nav__rotulo">Map</span>
+            </a>
+        </div>
+        <div class="barra-lateral__cta">
+            <button class="botao-dungeon">
+                <span class="material-symbols-outlined">swords</span>
+                <span class="botao-dungeon__rotulo">Entre Na Dungeon</span>
+            </button>
+        </div>
+        <div class="barra-lateral__rodape">
+            <a class="link-rodape" href="javascript:void(0)">
+                <span class="material-symbols-outlined">settings</span>
+                <span>Configuração</span>
+            </a>
+            <a class="link-rodape" href="javascript:void(0)" data-acao="sair">
+                <span class="material-symbols-outlined">logout</span>
+                <span>Sair</span>
+            </a>
+        </div>
+    </nav>
+
+
+    <main class="conteudo-principal">
+        <div class="conteudo-principal__fundo fundo-pedra"></div>
+        <header class="cabecalho-principal">
+            <div>
+                <h1 class="cabecalho-principal__titulo">Turmas Alunos</h1>
+                <p class="cabecalho-principal__subtitulo">Escolha seu caminho.</p>
+            </div>
+            <button class="botao-menu-mobile">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+        <div class="grid-materias" id="grid-materias"></div>
+    </main>
+
+    <nav class="barra-inferior">
+        <a class="barra-inferior__item ativo" href="materias.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+            <span class="barra-inferior__rotulo">Quests</span>
+        </a>
+        <a class="barra-inferior__item" href="javascript:void(0)">
+            <span class="material-symbols-outlined">shield</span>
+            <span class="barra-inferior__rotulo">Inventory</span>
+        </a>
+        <a class="barra-inferior__item" href="javascript:void(0)" data-acao="sair">
+            <span class="material-symbols-outlined">logout</span>
+            <span class="barra-inferior__rotulo">Logout</span>
+        </a>
+    </nav>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/materias.js"></script>
+</body>
+
+</html>
