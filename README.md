@@ -46,17 +46,6 @@ Nesta versão foi implementado um fluxo funcional contendo login, visualização
 
 ---
 
-## Estrutura do projeto
-
-```
-codigo-fonte/
-documentacao/
-evidencias/
-README.md
-```
-
----
-
 ## Fluxo implementado
 
 Login
@@ -65,6 +54,13 @@ Login
 → Cadastro
 → Edição
 → Exclusão
+
+---
+
+---
+## Vídeo de demonstração
+
+https://youtu.be/rXaf9qmHiiI
 
 ---
 
